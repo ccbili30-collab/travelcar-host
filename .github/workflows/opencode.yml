@@ -9,7 +9,7 @@ on:
       prompt:
         description: 'Task for OpenCode'
         required: true
-        default: 'Review this repository and suggest improvements'
+        default: 'ping - respond with "pong" to confirm connection'
 jobs:
   opencode:
     if: |

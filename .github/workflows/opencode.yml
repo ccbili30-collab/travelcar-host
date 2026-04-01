@@ -38,13 +38,13 @@ jobs:
               "provider": {
                 "openai": {
                   "models": {
-                    "glm-4.7": {
-                      "name": "GLM-4.7"
+                    "claude-sonnet-4-6": {
+                      "name": "Claude Sonnet 4.6"
                     }
                   }
                 }
               }
             }
         with:
-          model: openai/glm-4.7
+          model: openai/claude-sonnet-4-6
           prompt: ${{ github.event.inputs.prompt || '' }}

@@ -5,6 +5,11 @@ on:
   pull_request_review_comment:
     types: [created]
   workflow_dispatch:
+    inputs:
+      prompt:
+        description: 'Task for OpenCode'
+        required: true
+        default: 'Review this repository and suggest improvements'
 jobs:
   opencode:
     if: |
@@ -30,3 +35,4 @@ jobs:
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
         with:
           model: openai/gpt-4
+          prompt: ${{ github.event.inputs.prompt || '' }}

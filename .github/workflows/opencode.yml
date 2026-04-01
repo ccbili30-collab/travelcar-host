@@ -32,7 +32,7 @@ jobs:
         uses: anomalyco/opencode/github@latest
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_BASE_URL: https://jmrai.net/v1
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {

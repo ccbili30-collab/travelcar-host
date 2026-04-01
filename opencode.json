@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "jmrai": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "JMR AI",
+      "options": {
+        "baseURL": "https://jmrai.net/v1"
+      },
+      "models": {
+        "glm-4.7": {
+          "name": "GLM-4.7"
+        }
+      }
+    }
+  }
+}

@@ -34,5 +34,5 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
         with:
-          model: openai/gpt-4
+          model: minimax/minimax-m2.5
           prompt: ${{ github.event.inputs.prompt || '' }}

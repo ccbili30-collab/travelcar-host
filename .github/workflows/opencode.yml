@@ -33,6 +33,18 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: https://jmrai.net/v1
+          OPENCODE_CONFIG_CONTENT: |
+            {
+              "provider": {
+                "openai": {
+                  "models": {
+                    "glm-4.7": {
+                      "name": "GLM-4.7"
+                    }
+                  }
+                }
+              }
+            }
         with:
           model: openai/glm-4.7
           prompt: ${{ github.event.inputs.prompt || '' }}
